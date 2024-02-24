@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1.title Leave a message here
+    form(method="POST" action="/new")
+        p
+            label.form(for="user") Name:
+            input(id="user" type="text", value="" name="username")
+        p 
+            label.form(for="text") Message:
+            input(id="text" type="text", value="" name="msg")
+        button Submit
+    </form>

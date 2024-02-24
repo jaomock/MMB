@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class='header')
+    h1.title= title
+    p#main-title Welcome to my messageboard!
+    a#btn(href="/new"): button(type="button") Post a message!
+
+  div(class='mainBody')
+    ul
+      each message in messages 
+        li#name= message.user
+        li#msg= message.text
+        li#date= message.added
